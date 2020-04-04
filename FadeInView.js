@@ -22,7 +22,6 @@ class FadeInView extends Component {
   }
 
   render() {
-    const { viewOpacity } = this.state;
     const { style } = this.props;
 
     return (
