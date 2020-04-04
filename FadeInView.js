@@ -5,10 +5,6 @@ import { Animated } from 'react-native';
 class FadeInView extends Component {
   constructor() {
     super();
-
-    this.state = {
-      viewOpacity: new Animated.Value(0),
-    };
   }
 
   componentDidMount() {
@@ -30,7 +26,7 @@ class FadeInView extends Component {
     const { style } = this.props;
 
     return (
-      <Animated.View style={[{ opacity: viewOpacity }].concat(style || [])}>
+      <Animated.View style={[{ opacity: 0 }].concat(style || [])}>
         {this.props.children}
       </Animated.View>
     );
