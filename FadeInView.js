@@ -30,7 +30,7 @@ class FadeInView extends Component {
     const { style } = this.props;
 
     return (
-      <Animated.View style={[{ opacity: 0 }].concat(style || [])}>
+      <Animated.View style={[{ opacity: viewOpacity }].concat(style || [])}>
         {this.props.children}
       </Animated.View>
     );
