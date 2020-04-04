@@ -5,6 +5,10 @@ import { Animated } from 'react-native';
 class FadeInView extends Component {
   constructor() {
     super();
+
+    this.state = {
+      viewOpacity: new Animated.Value(0),
+    };
   }
 
   componentDidMount() {
@@ -22,6 +26,7 @@ class FadeInView extends Component {
   }
 
   render() {
+    const { viewOpacity } = this.state;
     const { style } = this.props;
 
     return (
